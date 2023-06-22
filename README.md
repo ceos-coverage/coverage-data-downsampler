@@ -20,3 +20,10 @@ This duplicates the code from here: https://github.com/vvangelovski/ulttb.py/tre
     * `project`: the project field for the solr query. Ex. `project=xyz`
     * `source_id`: the source_id field for the solr query. Ex. `source_id=abc`
     * `format`: the desired return format, either CSV or JSON. Ex. `format=text/csv`
+
+### Deployment
+
+```
+docker-compose build
+docker-compose up
+```
