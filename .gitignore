@@ -1,0 +1,6 @@
+__pycache__/
+oiip-cached-data/
+.vscode/
+*.pyc
+*.log
+.DS_Store

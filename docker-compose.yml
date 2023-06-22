@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  oiip-point-decimator-proxy:
+    image: nginx:1.20.1
+    network_mode: "bridge"
+    ports:
+      - "8100:80"
+      - "8101:8101"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_logs:/var/log/nginx
+
+  oiip-point-decimator:
+    build: .
+    network_mode: "service:oiip-point-decimator-proxy"
+    volumes:
+      - ./src:/oiip-point-decimator
+      - ./oiip-cached-data:/oiip-cached-data
+  
